@@ -1,6 +1,11 @@
 # 42Hive-Github-Vogsphere-Actions
 
-This action allows you to focus on setting up your work for a public repository on your personal Github page, and automate the submission process for vogsphere submission.
+This workflow pipeline allows you to focus on setting up your work to push to a personal Github Repository, and automate the submission process for vogsphere submission.
+
+Why you say? Investing a bit of time to build a workflow pipeline at the start of your project allows you to be more efficient in the long run. 
+Imagine that you want to showcase your work on a public repository to potential employers. You want to include a descriptive README file, the pdf of the project, test files, and have a well organised folder structure built to your liking. Doing this in parallel with the school projects at Hive, which has very strict requirements for what you can and cannot include in a project repository, means you'll need to work on 2 separate repositories.
+Creating and working on 2 separate repositories for the same project is inefficient and tedious, especially since much of the work in both repositories overlap with each other. This also has the added complexity of making sure both repositories have the latest work. 
+Therefore, the idea behind this is to allow you to set up your workflow such that you ONLY have to focus on one thing, building and pushing work for a personal Github repository. The rest (that is cloning, adding to, committing and pushing for the vogsphere repository) will be automated by the Github Actions, so you don't have to worry about it.
 
 ## Usage
 In your current working repository, add a directory from the root of the repository: ./.github/workflows
@@ -13,7 +18,7 @@ Download the `main.yml` file into the directory `.github/workflows` you just cre
 
 Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#Setting-up-vogsphere-repo)
 
-**DISCLAIMER**: This approach of using Github Actions to the vogsphere is dependent on Hive Helsinki keeping remote working live. Should Hive decide that you can only work on campus, then we will need to find another solution.
+**DISCLAIMER**: This approach of using Github Actions to push work to the vogsphere is dependent on Hive Helsinki keeping remote working live. Should Hive decide that you can only work on campus, then we will need to find another solution.
 
 ### Setup keys for use in pushing to the vogsphere
 For the Github actions workflows to work, you will need to set up the following secret variables in your github repository
