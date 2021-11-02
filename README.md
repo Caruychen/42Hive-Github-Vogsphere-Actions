@@ -11,6 +11,10 @@ the `-p` option tells `mkdir` to create any intermediate directories as required
 
 Download the `main.yml` file into the directory `.github/workflows` you just created. 
 
+Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#deploy-vogsphere)
+
+DISCLAIMER: This approach of using Github Actions to the vogsphere is dependent on Hive Helsinki keeping remote working live. Should Hive decide that you can only work on campus, then we will need to find another solution.
+
 ### Setup keys for use in pushing to the vogsphere
 For the Github actions workflows to work, you will need to set up the following secret variables in your github repository
 1. `KNOWN_HOSTS`
