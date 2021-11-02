@@ -1,0 +1,49 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Push to Vogsphere
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  submit:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      # Installs SSH key and Known hosts for vogsphere repository
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      # Clone vogsphere git repository
+      - name: Clones vogsphere git repository
+        run: cd .. && git clone ${{ secrets.VOGSPHERE_REPO }}
+      # Copy files into vogsphere repository
+      - name: Run shell script to copy files into vogsphere repository
+        env:
+            REPO_NAME: ${{ github.event.repository.name }}
+        run: |
+            cd ..
+            /bin/bash ./${{ env.REPO_NAME }}/deploy_vogsphere.sh
+      # Add, Commit and Push to vogsphere
+      - name: Add, commit, and push
+        run: |
+            cd ../intra-uuid-*
+            git config --global user.email "${{ secrets.USER_EMAIL }}"
+            git config --global user.name "${{ secrets.USER_NAME }}"
+            git add *
+            git commit -m "${{ github.event.head_commit.message }}"
+            git push
