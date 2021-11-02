@@ -13,15 +13,15 @@ Therefore, the idea behind this is to allow you to set up your workflow such tha
 I recommend taking the time to learn about [Github Actions](https://docs.github.com/en/actions). It is an essential component of the CI/CD step in software development, which you will come across a lot in Web development. The Fantastic [Full Stack Open](https://fullstackopen.com/en/part11) course contains a great component about CI/CD, which you will find very instructive. You'll learn a lot more exciting things about CI/CD in this course.
 
 ## Usage
-In your current working repository, add a directory from the root of the repository: ./.github/workflows
+1. In your current working repository, add a directory from the root of the repository: ./.github/workflows
 ```
 mkdir -p .github/workflows
 ```
 the `-p` option tells `mkdir` to create any intermediate directories as required.
 
-Download the `main.yml` file into the directory `.github/workflows` you just created. 
+2. Download the `main.yml` file into the directory `.github/workflows` you just created. 
 
-Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#Setting-up-vogsphere-repo)
+3. Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#Setting-up-vogsphere-repo)
 
 **DISCLAIMER**: This approach of using Github Actions to push work to the vogsphere is dependent on Hive Helsinki keeping remote working live. Should Hive decide that you can only work on campus, then we will need to find another solution.
 
