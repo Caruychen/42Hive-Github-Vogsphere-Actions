@@ -31,7 +31,7 @@ cat ~/.ssh/known_hosts
 `SSH_PRIVATE_KEY` is your secret ssh key. To find this use the following command and copy the output into the `SSH_PRIVATE_KEY` value:
 ```
 cat ~/.ssh/id_rsa
-``
+```
 `USER_EMAIL` and `USER_NAME` are pretty simple, you should know them.
 `VOGSPHERE_REPO` is the git repository link that you have on your project's intra page. NOTE: Should you fail a project, which you will, this value will need to be updated with the new git repository link. 
  
