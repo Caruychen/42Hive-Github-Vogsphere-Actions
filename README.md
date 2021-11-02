@@ -1,4 +1,4 @@
-# 42Hive-Github-Vogsphere-Actions
+# 42Hive Setting up a Github to Vogsphere Pipeline
 
 This workflow pipeline allows you to focus on setting up your work to push to a personal Github Repository, and automate the process for vogsphere submission.
 
