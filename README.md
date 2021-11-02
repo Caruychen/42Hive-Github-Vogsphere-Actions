@@ -13,15 +13,18 @@ Therefore, the idea behind this is to allow you to set up your workflow such tha
 I recommend taking the time to learn about [Github Actions](https://docs.github.com/en/actions). It is an essential component of the CI/CD step in software development, which you will come across a lot in Web development. The Fantastic [Full Stack Open](https://fullstackopen.com/en/part11) course contains a great component about CI/CD, which you will find very instructive. You'll learn a lot more exciting things about CI/CD in this course.
 
 ## Usage
-1. In your current working repository, add a directory from the root of the repository: ./.github/workflows
+1. First, start off by initialising your own Github repository on Github, and clone it on your own computer.
+2. In your current working repository, add a directory from the root of the repository: ./.github/workflows
 ```
 mkdir -p .github/workflows
 ```
 the `-p` option tells `mkdir` to create any intermediate directories as required.
 
-2. Download the `main.yml` file into the directory `.github/workflows` you just created. 
+3. Download the `main.yml` file into the directory `.github/workflows` you just created. 
 
-3. Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#Setting-up-vogsphere-repo)
+4. Create a shell file `deploy_vogsphere.sh` in the root of the repository. This will contain your business logic of how you want to structure the repository for vogsphere submission. This will be explained in the section futher [down](#Setting-up-vogsphere-repo)
+
+5. Once you are set up, you can get to work adding files, committing to, and pushing to your own Github repository. The rest will all be taken care of. **NOTE**: When pushing to your repository, the pipeline action happens automatically everytime you push. If you want to avoid pushing to the vogsphere, then include the string: \[skip ci\] including the brackets, in the commit message. This will cause it to skip the vogsphere submission step.
 
 **DISCLAIMER**: This approach of using Github Actions to push work to the vogsphere is dependent on Hive Helsinki keeping remote working live. Should Hive decide that you can only work on campus, then we will need to find another solution.
 
