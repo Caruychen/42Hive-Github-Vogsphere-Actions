@@ -24,15 +24,15 @@ From your Github Repository in the Web browser, go to **Settings**, and find the
 Github provides a useful and simple guide to setting up secrets [here](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
 
 ### Where to find the relevant values for the keys
-`KNOWN_HOSTS` Lets Github know about all the remotely connected hosts for the ssh client to use. It contains the host public key for all known hosts, which allows your Github Actions server to communicate with the vogsphere server. To find your known hosts, enter the following command, and copy into the `KNOWN_HOSTS` value:
+1. `KNOWN_HOSTS` Lets Github know about all the remotely connected hosts for the ssh client to use. It contains the host public key for all known hosts, which allows your Github Actions server to communicate with the vogsphere server. To find your known hosts, enter the following command, and copy into the `KNOWN_HOSTS` value:
 ```
 cat ~/.ssh/known_hosts
 ```
-`SSH_PRIVATE_KEY` is your secret ssh key. To find this use the following command and copy the output into the `SSH_PRIVATE_KEY` value:
+2. `SSH_PRIVATE_KEY` is your secret ssh key. To find this use the following command and copy the output into the `SSH_PRIVATE_KEY` value:
 ```
 cat ~/.ssh/id_rsa
 ```
-`USER_EMAIL` and `USER_NAME` are pretty simple, you should know them.
+3. `USER_EMAIL` and `USER_NAME` are pretty simple, you should know them.
 
-`VOGSPHERE_REPO` is the git repository link that you have on your project's intra page. NOTE: Should you fail a project, which you will, this value will need to be updated with the new git repository link. 
+4. `VOGSPHERE_REPO` is the git repository link that you have on your project's intra page. NOTE: Should you fail a project, which you will, this value will need to be updated with the new git repository link. 
  
