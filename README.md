@@ -10,7 +10,7 @@ Creating and working on 2 separate repositories for the same project is ineffici
 
 Therefore, the idea behind this is to allow you to set up your workflow such that you **ONLY** have to focus on one thing: building and pushing work for a personal Github repository. The rest (that is cloning, adding to, committing and pushing to the vogsphere repository) will be automated by Github Actions, so you don't have to worry about it.
 
-I recommend taking the time to learn about [Github Actions](https://docs.github.com/en/actions). It is an essential component of the CI/CD step in software development, which you will come across a lot in Web development. The Fantastic [Full Stack Open](https://fullstackopen.com/en/part11) course contains a great component about CI/CD, which you will find very instructive. You'll learn a lot more exciting things about CI/CD in this course.
+I recommend taking the time to learn about [Github Actions](https://docs.github.com/en/actions). It is an extraordinatily useful tool for automating developer workflows. Github Actions is one example of a technology that forms a significant component of CI/CD (Continuous integration / Continuous Deployment) which is integral to all software development projects these days. Knowing about these concepts will make you much more attractive to employers, there is a fantastic course component on CI/CD from the [Full Stack Open Course](https://fullstackopen.com/en/part11/introduction_to_ci_cd) by Helsinki University. Please do take the time to check it out, you will find it very instructive!
 
 ## Usage
 1. First, start off by initialising your own Github repository on Github, and clone it on your own computer.
