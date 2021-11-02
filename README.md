@@ -3,8 +3,11 @@
 This workflow pipeline allows you to focus on setting up your work to push to a personal Github Repository, and automate the submission process for vogsphere submission.
 
 Why you say? Investing a bit of time to build a workflow pipeline at the start of your project allows you to be more efficient in the long run. 
+
 Imagine that you want to showcase your work on a public repository to potential employers. You want to include a descriptive README file, the pdf of the project, test files, and have a well organised folder structure built to your liking. Doing this in parallel with the school projects at Hive, which has very strict requirements for what you can and cannot include in a project repository, means you'll need to work on 2 separate repositories.
+
 Creating and working on 2 separate repositories for the same project is inefficient and tedious, especially since much of the work in both repositories overlap with each other. This also has the added complexity of making sure both repositories have the latest work. 
+
 Therefore, the idea behind this is to allow you to set up your workflow such that you ONLY have to focus on one thing, building and pushing work for a personal Github repository. The rest (that is cloning, adding to, committing and pushing for the vogsphere repository) will be automated by the Github Actions, so you don't have to worry about it.
 
 ## Usage
