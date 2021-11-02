@@ -1,6 +1,6 @@
 # 42Hive-Github-Vogsphere-Actions
 
-This workflow pipeline allows you to focus on setting up your work to push to a personal Github Repository, and automate the submission process for vogsphere submission.
+This workflow pipeline allows you to focus on setting up your work to push to a personal Github Repository, and automate the process for vogsphere submission.
 
 Why you say? Investing a bit of time to build a pipeline at the start of your project allows you to be more efficient in the long run. 
 
