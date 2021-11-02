@@ -51,3 +51,10 @@ cat ~/.ssh/id_rsa
 4. `VOGSPHERE_REPO` is the git repository link that you have on your project's intra page. NOTE: Should you fail a project, which you will, this value will need to be updated with the new git repository link. 
  
 ### Setting up vogsphere repo
+The `deploy_vogsphere.sh` is a shell script in which you will write the logic for how you want to allocate files from your Github repository, into the vogsphere repository. 
+
+It should be fairly simple, and you won't need to add anything complicated. The process is simply copying using the `cp` command from the working github repository (which is the name you gave your repository) into the vogsphere repository (which starts with intra-uuid-\*).
+
+It is totally up to you, it will depend on how you've structured your own repository, and what is expected for the project's vogsphere repository. You can check out the example shown in this repo's [shell script](https://github.com/Caruychen/42Hive-Github-Vogsphere-Actions/blob/main/deploy_vogsphere.sh)
+
+This example is based on my [Libft github repository](https://github.com/Caruychen/42Hive-Libft).
