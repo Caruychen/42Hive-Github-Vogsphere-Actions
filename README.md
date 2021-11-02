@@ -6,7 +6,7 @@ Why you say? Investing a bit of time to build a pipeline at the start of your pr
 
 Imagine that you want to showcase your work on a public repository to potential employers. You want to include a descriptive README file, the pdf of the project, test files, and have a well organised folder structure built to your liking. Doing this in parallel with the school projects at Hive, which has very strict requirements for what you can and cannot include in a project repository, means you'll need to work on 2 separate repositories.
 
-Creating and working on 2 separate repositories for the same project is inefficient and tedious, especially since much of the work in both repositories overlap with each other. This also has the added complexity of making sure both repositories have the latest work. 
+Creating and working on 2 separate repositories for the same project is inefficient and tedious. Much of the work in both repositories overlap with each other, but you might structure the folders differently, and include some extra test files and READMEs in the Github repository. This also has the added complexity of making sure both repositories have the latest work. 
 
 Therefore, the idea behind this is to allow you to set up your workflow such that you **ONLY** have to focus on one thing: building and pushing work for a personal Github repository. The rest (that is cloning, adding to, committing and pushing to the vogsphere repository) will be automated by Github Actions, so you don't have to worry about it.
 
