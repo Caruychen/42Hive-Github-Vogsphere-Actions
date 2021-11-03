@@ -38,8 +38,14 @@ jobs:
         run: |
             cd ..
             /bin/bash ./${{ env.REPO_NAME }}/deploy_vogsphere.sh
+      - name: Check git status
+        run: |
+            cd ../intra-uuid-*
+            echo "::set-output name=GIT_STATUS::$(git status -s)"
+        id: git-status
       # Add, Commit and Push to vogsphere
       - name: Add, commit, and push
+        if: steps.git-status.outputs.GIT_STATUS != ''
         run: |
             cd ../intra-uuid-*
             git config --global user.email "${{ secrets.USER_EMAIL }}"
