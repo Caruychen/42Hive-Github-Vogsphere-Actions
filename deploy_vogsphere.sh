@@ -23,6 +23,7 @@
 
 # This shell script expects to be executed from the parent directory to the repositories
 
+rm -rf ./intra-uuid-*/*
 cp ./$REPO_NAME/author ./intra-uuid-*
 cp ./$REPO_NAME/Makefile ./intra-uuid-*
 cp ./$REPO_NAME/srcs/* ./intra-uuid-*
