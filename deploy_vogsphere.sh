@@ -23,8 +23,10 @@
 
 # This shell script expects to be executed from the parent directory to the repositories
 
-rm -rf ./intra-uuid-*/*
-cp ./$REPO_NAME/author ./intra-uuid-*
-cp ./$REPO_NAME/Makefile ./intra-uuid-*
-cp ./$REPO_NAME/srcs/* ./intra-uuid-*
-cp ./$REPO_NAME/includes/* ./intra-uuid-*
+VOGSPHERE=$(ls | sed -n '/intra-uuid/p')
+
+rm -rf ./${VOGSPHERE}/*
+sed '/prod/,$d' ./$REPO_NAME/Makefile > ./${VOGSPHERE}/Makefile
+cp ./$REPO_NAME/author ./${VOGSPHERE}
+cp ./$REPO_NAME/srcs/* ./${VOGSPHERE}
+cp ./$REPO_NAME/includes/* ./${VOGSPHERE}
